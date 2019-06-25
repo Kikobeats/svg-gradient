@@ -42,7 +42,6 @@
     "npm-check-updates": "latest",
     "nyc": "latest",
     "prettier-standard": "latest",
-    "pretty": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
     "standard-version": "latest"

@@ -22,7 +22,7 @@ const positionsForOrientation = orientation => {
         positions.x1 = '100%'
         break
 
-      case 'up':
+      case 'top':
         positions.y1 = '100%'
         break
 
@@ -30,7 +30,7 @@ const positionsForOrientation = orientation => {
         positions.x2 = '100%'
         break
 
-      case 'down':
+      case 'bottom':
         positions.y2 = '100%'
         break
 
