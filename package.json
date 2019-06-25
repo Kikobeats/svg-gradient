@@ -2,7 +2,7 @@
   "name": "svg-gradient",
   "description": "Generate a SVG gradient markup from CSS",
   "homepage": "https://nicedoc.io/Kikobeats/svg-gradient",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
@@ -17,23 +17,21 @@
     "url": "https://github.com/Kikobeats/svg-gradient/issues"
   },
   "keywords": [
+    "css",
     "generate",
     "gradient",
     "linear",
     "radial",
-    "svg",
-    "css"
+    "svg"
   ],
   "dependencies": {
     "gradient-parser": "~0.1.5"
   },
-  "files": [
-    "index.js"
-  ],
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "ava": "latest",
+    "ci-publish": "latest",
     "conventional-github-releaser": "latest",
     "coveralls": "latest",
     "finepack": "latest",
@@ -47,12 +45,14 @@
     "pretty": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
-    "standard-version": "latest",
-    "ci-publish": "latest"
+    "standard-version": "latest"
   },
   "engines": {
     "node": ">= 8"
   },
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "clean": "rm -rf node_modules",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
