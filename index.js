@@ -42,7 +42,7 @@ const positionsForOrientation = orientation => {
   return positions
 }
 
-module.exports = css => {
+module.exports = (css, props = {}) => {
   if (!css) return `<linearGradient id='lgrad' />`
 
   const { orientation, colorStops } = GradientParser.parse(css)[0]
@@ -85,8 +85,13 @@ module.exports = css => {
     .map(getColorStops)
     .join('')}</linearGradient>`
 
+  const htmlProps = Object.keys(props).reduce((acc, key) => {
+    const value = props[key]
+    return `${acc} ${key}="${value}"`
+  }, '')
+
   return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="200px" height="200px" >
+    <svg xmlns="http://www.w3.org/2000/svg" ${htmlProps}>
       <defs>
       ${linearGradient}
       </defs>

@@ -13,7 +13,6 @@
 [![Dependency status](https://img.shields.io/david/Kikobeats/svg-gradient.svg?style=flat-square)](https://david-dm.org/Kikobeats/svg-gradient)
 [![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/svg-gradient.svg?style=flat-square)](https://david-dm.org/Kikobeats/svg-gradient#info=devDependencies)
 [![NPM Status](https://img.shields.io/npm/dm/svg-gradient.svg?style=flat-square)](https://www.npmjs.org/package/svg-gradient)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
 
 > Generate a SVG gradient markup from CSS. Inspired by [angrytools.com/gradient](http://angrytools.com/gradient/) and [react-svg-gradient](https://github.com/davisml/react-svg-gradient).
 

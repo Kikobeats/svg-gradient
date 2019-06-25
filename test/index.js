@@ -15,7 +15,7 @@ test('rgba', t => {
   )
   t.deepEqual(
     svg,
-    prettyHtml(`<svg xmlns="http://www.w3.org/2000/svg" width="200px" height="200px">
+    prettyHtml(`<svg xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="lgrad" x1="0%" y1="50%" x2="100%" y2="50%">
         <stop offset="0%" style="stop-color:rgb(153,218,255);stop-opacity:1" />
@@ -35,7 +35,7 @@ test('hex', t => {
   )
   t.deepEqual(
     svg,
-    prettyHtml(`<svg xmlns="http://www.w3.org/2000/svg" width="200px" height="200px">
+    prettyHtml(`<svg xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="lgrad" x1="0%" y1="50%" x2="100%" y2="50%">
         <stop offset="0%" style="stop-color:rgb(153,218,255);stop-opacity:1" />
