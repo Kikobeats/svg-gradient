@@ -3,7 +3,7 @@
 const GradientParser = require('gradient-parser')
 
 const positionsForOrientation = orientation => {
-  let positions = {
+  const positions = {
     x1: '0%',
     x2: '0%',
     y1: '0%',
@@ -43,7 +43,7 @@ const positionsForOrientation = orientation => {
 }
 
 module.exports = (css, props = {}) => {
-  if (!css) return `<linearGradient id='lgrad' />`
+  if (!css) return "<linearGradient id='lgrad' />"
 
   const { orientation, colorStops } = GradientParser.parse(css)[0]
   const { x1, x2, y1, y2 } = positionsForOrientation(orientation)
