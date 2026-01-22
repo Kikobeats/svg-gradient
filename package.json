@@ -1,7 +1,7 @@
 {
   "name": "svg-gradient",
   "description": "Generate a SVG gradient markup from CSS",
-  "homepage": "https://nicedoc.io/Kikobeats/svg-gradient",
+  "homepage": "https://github.com/Kikobeats/svg-gradient",
   "version": "1.0.3",
   "main": "index.js",
   "author": {
@@ -30,17 +30,16 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
-    "ava": "latest",
+    "@ksmithut/prettier-standard": "latest",
+    "c8": "latest",
     "ci-publish": "latest",
-    "conventional-github-releaser": "latest",
     "coveralls": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
     "git-dirty": "latest",
-    "lint-staged": "latest",
-    "npm-check-updates": "latest",
+    "github-generate-release": "latest",
+    "nano-staged": "latest",
     "nyc": "latest",
-    "prettier-standard": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
@@ -57,26 +56,28 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown README.md && standard",
     "postrelease": "npm run release:tags && npm run release:github && ci-publish",
-    "precommit": "lint-staged",
-    "prerelease": "npm run update:check",
     "pretest": "npm run lint",
     "pretty": "prettier-standard index.js {core,test,bin,scripts}/**/*.js --single-quote --print-width 100",
     "release": "standard-version -a",
-    "release:github": "conventional-github-releaser -p angular",
+    "release:github": "github-generate-release",
     "release:tags": "git push --follow-tags origin HEAD:master",
-    "test": "nyc ava",
-    "update": "ncu -u",
-    "update:check": "ncu -- --error-level 2"
+    "test": "c8 ava"
   },
   "license": "MIT",
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
+    ],
+    "rules": {
+      "body-max-line-length": [
+        0
+      ]
+    }
   },
-  "lint-staged": {
+  "nano-staged": {
     "*.js": [
-      "prettier-standard"
+      "prettier-standard",
+      "standard --fix"
     ],
     "*.md": [
       "standard-markdown"
@@ -87,6 +88,6 @@
   },
   "simple-git-hooks": {
     "commit-msg": "npx commitlint --edit",
-    "pre-commit": "npx lint-staged"
+    "pre-commit": "npx nano-staged"
   }
 }
