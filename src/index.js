@@ -1,6 +1,20 @@
 'use strict'
 
 const GradientParser = require('gradient-parser')
+const whoops = require('whoops')
+
+const GradientError = whoops('GradientError')
+
+const gradientParser = css => {
+  try {
+    return GradientParser.parse(css)[0]
+  } catch (cause) {
+    throw new GradientError({
+      message: 'Invalid CSS gradient',
+      cause
+    })
+  }
+}
 
 const positionsForOrientation = orientation => {
   const positions = {
@@ -45,7 +59,7 @@ const positionsForOrientation = orientation => {
 module.exports = (css, props = {}) => {
   if (!css) return "<linearGradient id='lgrad' />"
 
-  const { orientation, colorStops } = GradientParser.parse(css)[0]
+  const { orientation, colorStops } = gradientParser(css)
   const { x1, x2, y1, y2 } = positionsForOrientation(orientation)
 
   const getColorStops = (colorStop, index) => {
@@ -99,3 +113,5 @@ module.exports = (css, props = {}) => {
     </svg>
     `
 }
+
+module.exports.GradientError = GradientError
