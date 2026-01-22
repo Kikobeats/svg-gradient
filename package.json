@@ -2,7 +2,7 @@
   "name": "svg-gradient",
   "description": "Generate a SVG gradient markup from CSS",
   "homepage": "https://github.com/Kikobeats/svg-gradient",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",

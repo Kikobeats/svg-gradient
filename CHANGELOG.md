@@ -1,3 +1,11 @@
+## <small>1.0.4 (2026-01-22)</small>
+
+* docs: remove badges ([e7923d4](https://github.com/Kikobeats/svg-gradient/commit/e7923d4))
+* build: contributors ([0fb9c48](https://github.com/Kikobeats/svg-gradient/commit/0fb9c48))
+* Merge pull request #9 from Kikobeats/next ([159d6fb](https://github.com/Kikobeats/svg-gradient/commit/159d6fb)), closes [#9](https://github.com/Kikobeats/svg-gradient/issues/9)
+
+
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
