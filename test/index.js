@@ -2,7 +2,9 @@
 
 const test = require('ava')
 
-const svgLinearGradient = require('..')
+const svgLinearGradient = require('../src')
+
+const { GradientError } = require('../src')
 
 test('rgba', t => {
   t.snapshot(
@@ -22,4 +24,16 @@ test('hex', t => {
 
 test('directional', t => {
   t.snapshot(svgLinearGradient('linear-gradient(to bottom, #4A00E0, #8E2DE2)'))
+})
+
+test('throw an error if the gradient is not valid', t => {
+  const error = t.throws(() =>
+    svgLinearGradient(
+      'linear-gradient(to%20right%2C%20%23000046%2C%20%231cb5e0)'
+    )
+  )
+
+  t.is(error.message, 'Invalid CSS gradient')
+  t.truthy(error.cause)
+  t.true(error instanceof GradientError)
 })

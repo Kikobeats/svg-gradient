@@ -3,7 +3,7 @@
   "description": "Generate a SVG gradient markup from CSS",
   "homepage": "https://github.com/Kikobeats/svg-gradient",
   "version": "1.0.3",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
     "name": "Kiko Beats",
@@ -25,12 +25,14 @@
     "svg"
   ],
   "dependencies": {
-    "gradient-parser": "~1.1.1"
+    "gradient-parser": "~1.1.1",
+    "whoops": "~5.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@ksmithut/prettier-standard": "latest",
+    "ava": "latest",
     "c8": "latest",
     "ci-publish": "latest",
     "coveralls": "latest",
