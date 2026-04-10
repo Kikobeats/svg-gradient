@@ -1,3 +1,4 @@
+## 1.0.5 (2026-04-10)
 ## <small>1.0.4 (2026-01-22)</small>
 
 * docs: remove badges ([e7923d4](https://github.com/Kikobeats/svg-gradient/commit/e7923d4))
