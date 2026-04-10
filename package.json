@@ -26,7 +26,7 @@
     "svg"
   ],
   "dependencies": {
-    "gradient-parser": "~1.1.1",
+    "gradient-parser": "~1.2.0",
     "whoops": "~5.1.0"
   },
   "devDependencies": {
